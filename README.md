@@ -8,38 +8,12 @@
       Year={2018}
       }
 
-# Prerequisites Installation
-#!/bin/bash
-cd ~
-mkdir mcptam_deps
-cd mcptam_deps
+# Reference
+    The installation of the dependency can refer to the link：https://github.com/aharmat/mcptam/wiki/Quick-Start-Guide
+    
+# Calibration pattern
+   The calibration pattern image is in the calibration_pattern folder. You can print the calibration pattern size as 0.254x0.1905m like me, or you can print it to other sizes, as long as it is guaranteed that the applied actual calibration pattern has the same ratio of width and height with the original calibration pattern image.
 
-#TooN
-wget http://www.edwardrosten.com/cvd/TooN-2.2.tar.gz
-tar vxf TooN-2.2.tar.gz
-cd TooN-2.2
-./configure
-make
-make install
-cd ..
-
-#libcvd
-wget http://www.edwardrosten.com/cvd/libcvd-20150407.tar.gz
-tar vxf libcvd-20150407.tar.gz
-cd libcvd-20150407
-export CXXFLAGS=-D_REENTRANT
-./configure --without-ffmpeg
-make
-make install
-cd ..
-
-#gvars3
-wget http://www.edwardrosten.com/cvd/gvars-3.0.tar.gz
-tar vxf gvars-3.0.tar.gz
-cd gvars-3.0
-./configure --disable-widgets
-make
-make install
-cd ../../
-
-rm -rf mcptam_deps
+# Run
+ The link（https://github.com/aharmat/mcptam/wiki/Quick-Start-Guide） details the entire running process, my run command：
+ 
